@@ -1,0 +1,28 @@
+.soc-media {
+  margin-top: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.soc-media__item:not(:last-child) {
+  margin-right: 10px;
+}
+.soc-media__link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 44px;
+  width: 44px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  box-shadow: none;
+  background-color: #ffffff;
+  fill: $icon-color;
+  transition: background-color $basic-transition, fill $basic-transition;
+  &:hover,
+  &:focus {
+    background-color: $accented-text-color;
+    fill: #ffffff;
+  }
+}
