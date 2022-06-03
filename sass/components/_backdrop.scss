@@ -7,14 +7,16 @@
   transform: translate(-50%, -50%) scale(1.2);
   opacity: 0;
 }
+.no-scroll {
+  overflow: hidden;
+}
 .backdrop {
   position: fixed;
   top: 0;
   left: 0;
   opacity: 1;
   transform: scale(1);
-  transition: transform $basic-transition,
-    opacity $basic-transition;
+  transition: transform $basic-transition, opacity $basic-transition;
   height: 100%;
   width: 100%;
   background: rgba(0, 0, 0, 0.2);

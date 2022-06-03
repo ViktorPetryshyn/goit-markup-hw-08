@@ -20,9 +20,9 @@
             <span class="logo__web">Web</span
             ><span class="logo__studio">Studio</span>
           </a>
-          <button type="button" class="nav-button header-open-button">
-            <svg width="40" height="40">
-              <use></use>
+          <button type="button" class="open-button js-open-menu">
+            <svg class="open-button__icon" width="40" height="40">
+              <use href="./img/icon.svg#menu_40px"></use>
             </svg>
           </button>
           <ul class="nav-pages">
@@ -34,7 +34,7 @@
         <ul class="nav-contact">
           <li class="nav-contact__mail">
             <a href="mailto:info@devstudio.com">
-              <svg class="nav-contact__icon" width="16" height="12">
+              <svg class="nav-contact__icon mail" width="16" height="12">
                 <use href="img/icon.svg#envelope"></use>
               </svg>
               info@devstudio.com
@@ -42,7 +42,7 @@
           </li>
           <li class="nav-contact__tel">
             <a href="tel:+380961111111">
-              <svg class="nav-contact__icon" width="10" height="16">
+              <svg class="nav-contact__icon phone" width="10" height="16">
                 <use href="img/icon.svg#smartphone"></use>
               </svg>
               +38 096 111 11 11
@@ -50,24 +50,27 @@
           </li>
         </ul>
       </div>
-      <div class="menu-container mob-menu" id="mobile-menu">
-        <button class="menu js-close-menu">
-          <svg class="menu__icon-close">
-            <use href=""></use>
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="close-button js-close-menu">
+          <svg class="close-button__icon" width="40" height="40">
+            <use href="./img/icon.svg#close_40px"></use>
           </svg>
         </button>
 
-        <ul class="mobile-nav">
+        <ul class="mob-nav">
           <li class="mobile-nav__item">
-            <a href="./index.html" class="mobile-nav__link current">Студия</a>
+            <a href="./index.html" class="mobile-nav__link mcurrent">Студия</a>
           </li>
           <li class="mobile-nav__item">
-            <a href="./portfolio.html" class="mobile-nav__link">Портфолио</a>
+            <a href="./portfolio.html" class="mobile-nav__link "
+              >Портфолио</a
+            >
           </li>
           <li class="mobile-nav__item">
             <a href="#" class="mobile-nav__link">Контакты</a>
           </li>
         </ul>
+        <div class="mob-connect">
         <ul class="mob-contacts">
           <li class="mob-contacts__item">
             <a href="tel:+380961111111" class="mob-contacts__link">
@@ -94,6 +97,8 @@
             <a href="" class="mob-social__link">LinkedIn</a>
           </li>
         </ul>
+        </div>
+      </div>
       </div>
     </header>
     <main>
@@ -176,14 +181,18 @@
             <li class="wwd__item">
               <div class="wwd-card">
                 <div class="wwd-card__meta">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</div>
-                <img src="./img/img1.jpg" alt="программирование" width="370" />
+                <img
+                  src="./img/index/wwdimg1.jpg"
+                  alt="программирование"
+                  width="370"
+                />
               </div>
             </li>
             <li class="wwd__item">
               <div class="wwd-card">
                 <div class="wwd-card__meta">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</div>
                 <img
-                  src="./img/img2.jpg"
+                  src="./img/index/wwdimg2.jpg"
                   alt="разработка мобильных приложений"
                   width="370"
                 />
@@ -193,7 +202,7 @@
               <div class="wwd-card">
                 <div class="wwd-card__meta">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</div>
                 <img
-                  src="./img/img3.jpg"
+                  src="./img/index/wwdimg3.jpg"
                   alt="графический дизайн"
                   width="370"
                 />
@@ -210,11 +219,37 @@
           <h2 class="team__title">Наша команда</h2>
           <ul class="team__list">
             <li class="team__item">
-              <img
-                src="./img/igor.jpg"
-                alt="Фото Игорь Демьяненко"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/index/desktop/img270@1x.jpg 270w,
+                    ./img/index/desktop/img540@2x.jpg 540w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 25vw"
+                />
+                <source
+                  srcset="
+                    ./img/index/tablet/img354@1x.jpg 350w,
+                    ./img/index/tablet/img708@2x.jpg 708w
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="(min-width: 768px) 354px, 50vw"
+                />
+                <source
+                  srcset="
+                    ./img/index/mobile/img450@1x.jpg 450w,
+                    ./img/index/mobile/img900@2x.jpg 900w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                />
+
+                <img
+                  src="./img/index/mobile/img270@1x.jpg"
+                  alt="Фото Игорь Демьяненко"
+                />
+              </picture>
               <div class="team-card">
                 <h3 class="team-card__name">Игорь Демьяненко</h3>
                 <p class="team-card__position">Product Designer</p>
@@ -251,7 +286,36 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./img/olga.jpg" alt="Фото Ольга Репина" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/index/desktop/img270@1x(1).jpg 270w,
+                    ./img/index/desktop/img540@2x(1).jpg 540w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 25vw"
+                />
+                <source
+                  srcset="
+                    ./img/index/tablet/img354@1x(1).jpg 350w,
+                    ./img/index/tablet/img708@2x(1).jpg 708w
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="(min-width: 768px) 354px, 50vw"
+                />
+                <source
+                  srcset="
+                    ./img/index/mobile/img450@1x(1).jpg 450w,
+                    ./img/index/mobile/img900@2x(1).jpg 900w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                />
+                <img
+                  src="./img/index/mobile/img900@2x(1).jpg"
+                  alt="Фото Ольга Репина"
+                />
+              </picture>
               <div class="team-card">
                 <h3 class="team-card__name">Ольга Репина</h3>
                 <p class="team-card__position">Frontend Developer</p>
@@ -288,11 +352,33 @@
               </div>
             </li>
             <li class="team__item">
-              <img
-                src="./img/nikolay.jpg"
-                alt="Фото Николай Тарасов"
-                width="270"
-              />
+              <picture>
+                <source
+                  srcset="
+                    ./img/index/desktop/img270@1x(2).jpg 270w,
+                    ./img/index/desktop/img540@2x(2).jpg 540w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 25vw"
+                />
+                <source
+                  srcset="
+                    ./img/index/tablet/img354@1x(2).jpg 350w,
+                    ./img/index/tablet/img708@2x(2).jpg 708w
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="(min-width: 768px) 354px, 50vw"
+                />
+                <source
+                  srcset="
+                    ./img/index/mobile/img450@1x(2).jpg 450w,
+                    ./img/index/mobile/img900@2x(2).jpg 900w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                />
+                <img src="./img/nikolay.jpg" alt="Фото Николай Тарасов" />
+              </picture>
               <div class="team-card">
                 <h3 class="team-card__name">Николай Тарасов</h3>
                 <p class="team-card__position">Marketing</p>
@@ -329,7 +415,33 @@
               </div>
             </li>
             <li class="team__item">
-              <img src="./img/mike.jpg" alt="Фото Михаил Ермаков" width="270" />
+              <picture>
+                <source
+                  srcset="
+                    ./img/index/desktop/img270@1x(3).jpg 270w,
+                    ./img/index/desktop/img540@2x(3).jpg 540w
+                  "
+                  media="(min-width: 1200px)"
+                  sizes="(min-width: 1200px) 270px, 25vw"
+                />
+                <source
+                  srcset="
+                    ./img/index/tablet/img354@1x(3).jpg 350w,
+                    ./img/index/tablet/img708@2x(3).jpg 708w
+                  "
+                  media="(min-width: 768px) and (max-width: 1199px)"
+                  sizes="(min-width: 768px) 354px, 50vw"
+                />
+                <source
+                  srcset="
+                    ./img/index/mobile/img450@1x(3).jpg 450w,
+                    ./img/index/mobile/img900@2x(3).jpg 900w
+                  "
+                  media="(max-width: 767px)"
+                  sizes="(min-width: 480px) 450px, 100vw"
+                />
+                <img src="./img/mike.jpg" alt="Фото Михаил Ермаков" />
+              </picture>
               <div class="team-card">
                 <h3 class="team-card__name">Михаил Ермаков</h3>
                 <p class="team-card__position">UI Designer</p>
@@ -564,29 +676,26 @@
                 class="modal-chekbox__input"
                 value="agree"
               />
-              <span class="icon-box--nochecked">
-                <svg class="nochecked-icon" width="16" height="15">
-                  <use href="img/icon.svg#border-icon"></use>
-                </svg>
-              </span>
-              <span class="icon-box--checked">
-                <svg class="checked-icon" width="16" height="15">
+              <span class="icon-box">
+                <svg class="icon-box__icon" >
                   <use href="img/icon.svg#icon-check"></use>
                 </svg>
               </span>
-              Соглашаюсь с рассылкой и принимаю&nbsp;<a
-                href=""
-                class="agree-doc"
-                >Условия договора</a
-              >
+              <span class="agree-box">
+              Соглашаюсь с рассылкой и принимаю&nbsp; <a href="" class="agree-doc">Условия договора</a>
+              </span>
             </label>
           </div>
           <button type="submit" class="modal-form__button">Отправить</button>
         </form>
       </div>
     </div>
-
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
+      integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
+      crossorigin="anonymous"></script>
     <script src="./js/modal.js"></script>
-    <script src="./js/menu.js"></script>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

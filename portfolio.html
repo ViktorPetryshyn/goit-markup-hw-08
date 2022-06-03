@@ -20,6 +20,11 @@
             <span class="logo__web">Web</span
             ><span class="logo__studio">Studio</span>
           </a>
+          <button type="button" class="open-button menu-open-button">
+            <svg class="open-button__icon" width="40" height="40">
+              <use href="./img/icon.svg#menu_40px"></use>
+            </svg>
+          </button>
           <ul class="nav-pages">
             <li><a class="current" href="./index.html">Студия</a></li>
             <li><a href="./portfolio.html">Портфолио</a></li>
@@ -44,6 +49,54 @@
             </a>
           </li>
         </ul>
+      </div>
+      <div class="menu-container mob-menu">
+        <button class="close-button menu-close-button">
+          <svg class="close-button__icon" width="40" height="40">
+            <use href="./img/icon.svg#close_40px"></use>
+          </svg>
+        </button>
+
+        <ul class="mob-nav">
+          <li class="mobile-nav__item">
+            <a href="./index.html" class="mobile-nav__link">Студия</a>
+          </li>
+          <li class="mobile-nav__item">
+            <a href="./portfolio.html" class="mobile-nav__link mcurrent"
+              >Портфолио</a
+            >
+          </li>
+          <li class="mobile-nav__item">
+            <a href="#" class="mobile-nav__link">Контакты</a>
+          </li>
+        </ul>
+        <div class="mob-connect"></div>
+        <ul class="mob-contacts">
+          <li class="mob-contacts__item">
+            <a href="tel:+380961111111" class="mob-contacts__link">
+              <span class="mob-contacts__nomber">+38 096 111 11 11</span>
+            </a>
+          </li>
+          <li class="mob-contacts__item">
+            <a href="mailto:info@devstudio.com" class="mob-contacts__link">
+              <span class="mob-contacts__email">info@devstudio.com</span>
+            </a>
+          </li>
+        </ul>
+        <ul class="mob-social">
+          <li class="mob-social__item">
+            <a href="" class="mob-social__link">Instagram</a>
+          </li>
+          <li class="mob-social__item">
+            <a href="" class="mob-social__link">Twitter</a>
+          </li>
+          <li class="mob-social__item">
+            <a href="" class="mob-social__link">Facebook</a>
+          </li>
+          <li class="mob-social__item">
+            <a href="" class="mob-social__link">LinkedIn</a>
+          </li>
+        </ul></div>
       </div>
     </header>
 
@@ -79,12 +132,36 @@
                     Quia obcaecati inventore laboriosam aperiam beatae aut
                     facilis fugit?
                   </div>
-                  <img
-                    src="./img/laptop.jpg"
-                    alt="Картинка ноутбук"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/img370@1x.jpg 370w,
+                        ./img/portfolio/desktop/img740@2x.jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/img354@1x.jpg 354w,
+                        ./img/portfolio/tablet/img708@2x.jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/img450@1x.jpg 450w,
+                        ./img/portfolio/mobile/img900@2x.jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+                    <img
+                      src="./img/portfolio/desktop/img370@1x.jpg"
+                      alt="Картинка ноутбук"
+                    />
+                  </picture>
                 </div>
                 <div class="project__info">
                   <h2 class="project__name">Технокряк</h2>
@@ -101,12 +178,36 @@
                     Quia obcaecati inventore laboriosam aperiam beatae aut
                     facilis fugit?
                   </div>
-                  <img
-                    src="./img/poster.jpg"
-                    alt="Картинка баскетбольный постер"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/img370@1x(1).jpg 370w,
+                        ./img/portfolio/desktop/img740@2x(1).jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/img354@1x(1).jpg 354w,
+                        ./img/portfolio/tablet/img708@2x(1).jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/img450@1x(1).jpg 450w,
+                        ./img/portfolio/mobile/img900@2x(1).jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+                    <img
+                      src="./img/portfolio/desktop/img370@1x(1).jpg"
+                      alt="Картинка баскетбольный постер"
+                    />
+                  </picture>
                 </div>
                 <div class="project__info">
                   <h2 class="project__name">
@@ -125,12 +226,36 @@
                     Quia obcaecati inventore laboriosam aperiam beatae aut
                     facilis fugit?
                   </div>
-                  <img
-                    src="./img/seafoodlogo.jpg"
-                    alt="Картинга логотипа ресто"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/img370@1x(2).jpg 370w,
+                        ./img/portfolio/desktop/img740@2x(2).jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/img354@1x(2).jpg 354w,
+                        ./img/portfolio/tablet/img708@2x(2).jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/img450@1x(2).jpg 450w,
+                        ./img/portfolio/mobile/img900@2x(2).jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+                    <img
+                      src="./img/portfolio/desktop/img370@1x(2).jpg"
+                      alt="Картинга логотипа ресто"
+                    />
+                  </picture>
                 </div>
                 <div class="project__info">
                   <h2 class="project__name">Ресторан Seafood</h2>
@@ -147,12 +272,36 @@
                     Quia obcaecati inventore laboriosam aperiam beatae aut
                     facilis fugit?
                   </div>
-                  <img
-                    src="./img/headphone.jpg"
-                    alt="Наушники"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/img370@1x(3).jpg 370w,
+                        ./img/portfolio/desktop/img740@2x(3).jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/img354@1x(3).jpg 354w,
+                        ./img/portfolio/tablet/img708@2x(3).jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/img450@1x(3).jpg 450w,
+                        ./img/portfolio/mobile/img900@2x(3).jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+                    <img
+                      src="./img/portfolio/desktop/img370@1x(3).jpg"
+                      alt="Наушники"
+                    />
+                  </picture>
                 </div>
                 <div class="project__info">
                   <h2 class="project__name">Проект Prime</h2>
@@ -169,12 +318,36 @@
                     Quia obcaecati inventore laboriosam aperiam beatae aut
                     facilis fugit?
                   </div>
-                  <img
-                    src="./img/projectboxes.jpg"
-                    alt="Картинка коробки"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/img370@1x(4).jpg 370w,
+                        ./img/portfolio/desktop/img740@2x(4).jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/img354@1x(4).jpg 354w,
+                        ./img/portfolio/tablet/img708@2x(4).jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/img450@1x(4).jpg 450w,
+                        ./img/portfolio/mobile/img900@2x(4).jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+                    <img
+                      src="./img/portfolio/desktop/img370@1x(4).jpg"
+                      alt="Картинка коробки"
+                    />
+                  </picture>
                 </div>
                 <div class="project__info">
                   <h2 class="project__name">Проект Boxes</h2>
@@ -191,12 +364,36 @@
                     Quia obcaecati inventore laboriosam aperiam beatae aut
                     facilis fugit?
                   </div>
-                  <img
-                    src="./img/monoblock.jpg "
-                    alt="Картинка моноблок"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/img370@1x(5).jpg 370w,
+                        ./img/portfolio/desktop/img740@2x(5).jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/img354@1x(5).jpg 354w,
+                        ./img/portfolio/tablet/img708@2x(5).jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/img450@1x(5).jpg 450w,
+                        ./img/portfolio/mobile/img900@2x(5).jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+                    <img
+                      src="./img/portfolio/desktop/img370@1x(5).jpg"
+                      alt="Картинка моноблок"
+                    />
+                  </picture>
                 </div>
                 <div class="project__info">
                   <h2 class="project__name">Inspiration has no Borders</h2>
@@ -213,12 +410,36 @@
                     Quia obcaecati inventore laboriosam aperiam beatae aut
                     facilis fugit?
                   </div>
-                  <img
-                    src="./img/magazines.jpg"
-                    alt="Картинка журнала"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/img370@1x(6).jpg 370w,
+                        ./img/portfolio/desktop/img740@2x(6).jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/img354@1x(6).jpg 354w,
+                        ./img/portfolio/tablet/img708@2x(6).jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/img450@1x(6).jpg 450w,
+                        ./img/portfolio/mobile/img900@2x(6).jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+                    <img
+                      src="./img/portfolio/desktop/img370@1x(6).jpg"
+                      alt="Картинка журнала"
+                    />
+                  </picture>
                 </div>
                 <div class="project__info">
                   <h2 class="project__name">Издание Limited Edition</h2>
@@ -235,12 +456,36 @@
                     Quia obcaecati inventore laboriosam aperiam beatae aut
                     facilis fugit?
                   </div>
-                  <img
-                    src="./img/projectlab.jpg"
-                    alt="Картинка бирки LAB"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/img370@1x(7).jpg 370w,
+                        ./img/portfolio/desktop/img740@2x(7).jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/img354@1x(7).jpg 354w,
+                        ./img/portfolio/tablet/img708@2x(7).jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/img450@1x(7).jpg 450w,
+                        ./img/portfolio/mobile/img900@2x(7).jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+                    <img
+                      src="./img/portfolio/desktop/img370@1x(7).jpg"
+                      alt="Картинка бирки LAB"
+                    />
+                  </picture>
                 </div>
                 <div class="project__info">
                   <h2 class="project__name">Проект LAB</h2>
@@ -257,12 +502,36 @@
                     Quia obcaecati inventore laboriosam aperiam beatae aut
                     facilis fugit?
                   </div>
-                  <img
-                    src="./img/laptop2.jpg"
-                    alt="Картинка работы за ноутбуком"
-                    width="370"
-                    height="294"
-                  />
+                  <picture>
+                    <source
+                      srcset="
+                        ./img/portfolio/desktop/img370@1x(8).jpg 370w,
+                        ./img/portfolio/desktop/img740@2x(8).jpg 740w
+                      "
+                      media="(min-width: 1200px)"
+                      sizes="(min-width: 1200px) 370px, 33vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/tablet/img354@1x(8).jpg 354w,
+                        ./img/portfolio/tablet/img708@2x(8).jpg 708w
+                      "
+                      media="(min-width: 768px) and (max-width: 1199px)"
+                      sizes="(min-width: 768px) 354px, 50vw"
+                    />
+                    <source
+                      srcset="
+                        ./img/portfolio/mobile/img450@1x(8).jpg 450w,
+                        ./img/portfolio/mobile/img900@2x(8).jpg 900w
+                      "
+                      media="(max-width: 767px)"
+                      sizes="(min-width: 480px) 450px, 100vw"
+                    />
+                    <img
+                      src="./img/portfolio/desktop/img370@1x(8).jpg"
+                      alt="Картинка работы за ноутбуком"
+                    />
+                  </picture>
                 </div>
                 <div class="project__info">
                   <h2 class="project__name">Growing Business</h2>
@@ -353,5 +622,6 @@
         </form>
       </div>
     </footer>
+    <script src="./js/mobile-menu.js"></script>
   </body>
 </html>

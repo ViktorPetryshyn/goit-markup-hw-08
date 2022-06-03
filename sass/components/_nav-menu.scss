@@ -63,6 +63,9 @@
   }
 }
 .nav-contact li:not(:first-child) {
+  @media screen and (max-width: 1199px) {
+    margin-top: 10px;
+  }
   @media screen and (min-width: $desktop) {
     margin-left: 50px;
   }
@@ -86,14 +89,33 @@
 .nav-contact__icon {
   margin-right: 10px;
 }
-
+.nav-contact__icon.mail {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: 14px;
+    height: 10px;
+  }
+}
+.nav-contact__icon.phone {
+  @media screen and (min-width: $tablet) and (max-width: 1199px) {
+    width: 10px;
+    height: 14px;
+  }
+}
 .nav-contact__mail a,
 .nav-contact__tel a {
   display: flex;
   align-items: center;
 }
-.nav-button {
+.open-button {
   margin-left: auto;
+  border: none;
+  background: #fff;
+  transition: fill $basic-transition;
+  &:hover,
+  &:focus {
+    fill: $accented-text-color;
+    cursor: pointer;
+  }
   @media screen and (min-width: $tablet) {
     display: none;
   }
