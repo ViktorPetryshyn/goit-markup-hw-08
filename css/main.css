@@ -916,6 +916,12 @@ a {
   border-color: #2196f3;
 }
 
+.agree-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .agree-doc {
   color: #2196f3;
 }
@@ -923,7 +929,7 @@ a {
 .modal-form__button {
   display: block;
   margin: 0 auto;
-  width: 200px;
+  width: 100%;
   height: 50px;
   font-weight: 700;
   font-size: 16px;
@@ -937,6 +943,12 @@ a {
   border-radius: 4px;
   -webkit-transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (min-width: 320px) {
+  .modal-form__button {
+    width: 200px;
+  }
 }
 
 .modal-form__button:hover {
@@ -1407,6 +1419,9 @@ a {
 }
 
 .project__info {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -1431,7 +1446,14 @@ a {
 }
 
 .project__link {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
   text-decoration: none;
   -webkit-transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: -webkit-box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);

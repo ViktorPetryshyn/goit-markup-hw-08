@@ -17,6 +17,7 @@
   }
 }
 .project__info {
+  flex-grow: 1;
   padding: 20px 24px;
   border-bottom: 1px solid #eeeeee;
   border-right: 1px solid #eeeeee;
@@ -38,7 +39,9 @@
   color: $secondary-text-color;
 }
 .project__link {
-  display: block;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
   text-decoration: none;
   transition: box-shadow $basic-transition;
   &:hover,
