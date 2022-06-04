@@ -17,7 +17,7 @@
 .hero__title {
   margin-left: auto;
   margin-right: auto;
-  width: 360px;
+  width: 100%;
   margin-bottom: 30px;
   font-weight: 900;
   font-size: 26px;
@@ -25,6 +25,9 @@
   letter-spacing: 0.06em;
   text-transform: uppercase;
   color: #ffffff;
+  @media screen and (min-width: $mobile) {
+    width: 360px;
+  }
   @media screen and (min-width: $desktop) {
     width: 696px;
     font-size: 44px;

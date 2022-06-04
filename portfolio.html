@@ -20,7 +20,7 @@
             <span class="logo__web">Web</span
             ><span class="logo__studio">Studio</span>
           </a>
-          <button type="button" class="open-button menu-open-button">
+          <button type="button" class="open-button js-open-menu" aria-expanded="false">
             <svg class="open-button__icon" width="40" height="40">
               <use href="./img/icon.svg#menu_40px"></use>
             </svg>
@@ -50,8 +50,8 @@
           </li>
         </ul>
       </div>
-      <div class="menu-container mob-menu">
-        <button class="close-button menu-close-button">
+      <div class="menu-container js-menu-container" id="mobile-menu">
+        <button class="close-button js-close-menu">
           <svg class="close-button__icon" width="40" height="40">
             <use href="./img/icon.svg#close_40px"></use>
           </svg>
@@ -59,10 +59,10 @@
 
         <ul class="mob-nav">
           <li class="mobile-nav__item">
-            <a href="./index.html" class="mobile-nav__link">Студия</a>
+            <a href="./index.html" class="mobile-nav__link mcurrent">Студия</a>
           </li>
           <li class="mobile-nav__item">
-            <a href="./portfolio.html" class="mobile-nav__link mcurrent"
+            <a href="./portfolio.html" class="mobile-nav__link "
               >Портфолио</a
             >
           </li>
@@ -70,7 +70,7 @@
             <a href="#" class="mobile-nav__link">Контакты</a>
           </li>
         </ul>
-        <div class="mob-connect"></div>
+        <div class="mob-connect">
         <ul class="mob-contacts">
           <li class="mob-contacts__item">
             <a href="tel:+380961111111" class="mob-contacts__link">
@@ -96,7 +96,9 @@
           <li class="mob-social__item">
             <a href="" class="mob-social__link">LinkedIn</a>
           </li>
-        </ul></div>
+        </ul>
+        </div>
+      </div>
       </div>
     </header>
 
