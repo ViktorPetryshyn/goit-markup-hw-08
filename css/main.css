@@ -513,12 +513,24 @@ a {
   color: #2196f3;
 }
 
+@media screen and (max-width: 479px) {
+  .mob-contacts__nomber {
+    font-size: calc((100vw - 320px) / (480 - 320) * (34 - 27) + 27px);
+  }
+}
+
 .mob-contacts__email {
   font-weight: 500;
   font-size: 24px;
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: #757575;
+}
+
+@media screen and (max-width: 479px) {
+  .mob-contacts__email {
+    font-size: calc((100vw - 320px) / (480 - 320) * (24 - 20) + 20px);
+  }
 }
 
 .mob-social {
@@ -544,6 +556,12 @@ a {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
+}
+
+@media screen and (max-width: 479px) {
+  .mob-social__link {
+    font-size: calc((100vw - 320px) / (480 - 320) * (18 - 11) + 10px);
+  }
 }
 
 .close-button {
@@ -725,7 +743,7 @@ a {
   top: 50%;
   left: 50%;
   width: calc(100% - 30px);
-  height: calc(100% - 180px);
+  height: calc(100% - 100px);
   padding: 40px;
   background-color: #fff;
   opacity: 1;
@@ -740,8 +758,9 @@ a {
   border-radius: 4px;
 }
 
-@media (max-width: 480px) {
+@media (max-width: 479px) {
   .modal {
+    padding: 20px;
     overflow-y: scroll;
   }
 }
@@ -1489,7 +1508,7 @@ a {
 
 .project__meta {
   position: absolute;
-  padding: 63px 24px;
+  padding: 83px 24px 71px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -1505,6 +1524,25 @@ a {
   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), -webkit-transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media screen and (max-width: 479px) {
+  .project__meta {
+    padding: 20px 17px;
+    font-size: calc((100vw - 320px) / (480 - 320) * (18 - 15) + 15px);
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .project__meta {
+    padding: 71px 24px 55px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project__meta {
+    padding: 63px 24px;
+  }
 }
 
 footer {
@@ -1632,6 +1670,7 @@ address {
 }
 
 .subscribe {
+  display: block;
   margin-top: 20px;
 }
 

@@ -62,7 +62,7 @@
 }
 .project__meta {
   position: absolute;
-  padding: 63px 24px;
+  padding: 83px 24px 71px;
   font-style: normal;
   font-weight: 400;
   font-size: 18px;
@@ -74,4 +74,14 @@
   opacity: 0;
   pointer-events: none;
   transition: transform $basic-transition, opacity $basic-transition;
+  @media screen and (max-width: 479px) {
+    padding: 20px 17px;
+    font-size: calc((100vw - 320px) / (480 - 320) * (18 - 15) + 15px);
+  }
+  @media screen and (min-width: $tablet) {
+    padding: 71px 24px 55px;
+  }
+  @media screen and (min-width: $desktop) {
+    padding: 63px 24px;
+  }
 }

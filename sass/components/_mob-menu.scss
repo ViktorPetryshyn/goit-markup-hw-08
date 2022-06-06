@@ -72,6 +72,9 @@ a {
   line-height: 1.17;
   letter-spacing: 0.02em;
   color: #2196f3;
+  @media screen and (max-width: 479px) {
+    font-size: calc((100vw - 320px) / (480 - 320) * (34 - 27) + 27px);
+  }
 }
 .mob-contacts__email {
   font-weight: 500;
@@ -79,6 +82,9 @@ a {
   line-height: 1.16;
   letter-spacing: 0.02em;
   color: #757575;
+  @media screen and (max-width: 479px) {
+    font-size: calc((100vw - 320px) / (480 - 320) * (24 - 20) + 20px);
+  }
 }
 
 // mobile-social
@@ -102,6 +108,9 @@ a {
   line-height: 1.22;
   letter-spacing: 0.02em;
   color: #2196f3;
+  @media screen and (max-width: 479px) {
+    font-size: calc((100vw - 320px) / (480 - 320) * (18 - 11) + 10px);
+  }
 }
 
 .close-button {

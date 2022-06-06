@@ -20,7 +20,11 @@
             <span class="logo__web">Web</span
             ><span class="logo__studio">Studio</span>
           </a>
-          <button type="button" class="open-button js-open-menu" aria-expanded="false">
+          <button
+            type="button"
+            class="open-button js-open-menu"
+            aria-expanded="false"
+          >
             <svg class="open-button__icon" width="40" height="40">
               <use href="./img/icon.svg#menu_40px"></use>
             </svg>
@@ -62,43 +66,40 @@
             <a href="./index.html" class="mobile-nav__link mcurrent">Студия</a>
           </li>
           <li class="mobile-nav__item">
-            <a href="./portfolio.html" class="mobile-nav__link "
-              >Портфолио</a
-            >
+            <a href="./portfolio.html" class="mobile-nav__link">Портфолио</a>
           </li>
           <li class="mobile-nav__item">
             <a href="#" class="mobile-nav__link">Контакты</a>
           </li>
         </ul>
         <div class="mob-connect">
-        <ul class="mob-contacts">
-          <li class="mob-contacts__item">
-            <a href="tel:+380961111111" class="mob-contacts__link">
-              <span class="mob-contacts__nomber">+38 096 111 11 11</span>
-            </a>
-          </li>
-          <li class="mob-contacts__item">
-            <a href="mailto:info@devstudio.com" class="mob-contacts__link">
-              <span class="mob-contacts__email">info@devstudio.com</span>
-            </a>
-          </li>
-        </ul>
-        <ul class="mob-social">
-          <li class="mob-social__item">
-            <a href="" class="mob-social__link">Instagram</a>
-          </li>
-          <li class="mob-social__item">
-            <a href="" class="mob-social__link">Twitter</a>
-          </li>
-          <li class="mob-social__item">
-            <a href="" class="mob-social__link">Facebook</a>
-          </li>
-          <li class="mob-social__item">
-            <a href="" class="mob-social__link">LinkedIn</a>
-          </li>
-        </ul>
+          <ul class="mob-contacts">
+            <li class="mob-contacts__item">
+              <a href="tel:+380961111111" class="mob-contacts__link">
+                <span class="mob-contacts__nomber">+38 096 111 11 11</span>
+              </a>
+            </li>
+            <li class="mob-contacts__item">
+              <a href="mailto:info@devstudio.com" class="mob-contacts__link">
+                <span class="mob-contacts__email">info@devstudio.com</span>
+              </a>
+            </li>
+          </ul>
+          <ul class="mob-social">
+            <li class="mob-social__item">
+              <a href="" class="mob-social__link">Instagram</a>
+            </li>
+            <li class="mob-social__item">
+              <a href="" class="mob-social__link">Twitter</a>
+            </li>
+            <li class="mob-social__item">
+              <a href="" class="mob-social__link">Facebook</a>
+            </li>
+            <li class="mob-social__item">
+              <a href="" class="mob-social__link">LinkedIn</a>
+            </li>
+          </ul>
         </div>
-      </div>
       </div>
     </header>
     <main>
@@ -182,7 +183,8 @@
               <div class="wwd-card">
                 <div class="wwd-card__meta">ДЕСКТОПНЫЕ ПРИЛОЖЕНИЯ</div>
                 <img
-                  src="./img/index/wwdimg1.jpg"
+                  srcset="./img/index/box1.jpg 1x, ./img/index/box1@2x.jpg 2x"
+                  src="./img/index/box1.jpg"
                   alt="программирование"
                   width="370"
                 />
@@ -192,7 +194,8 @@
               <div class="wwd-card">
                 <div class="wwd-card__meta">МОБИЛЬНЫЕ ПРИЛОЖЕНИЯ</div>
                 <img
-                  src="./img/index/wwdimg2.jpg"
+                  srcset="./img/index/box2.jpg 1x, ./img/index/box2@2x.jpg 2x"
+                  src="./img/index/box2.jpg"
                   alt="разработка мобильных приложений"
                   width="370"
                 />
@@ -202,7 +205,8 @@
               <div class="wwd-card">
                 <div class="wwd-card__meta">ДИЗАЙНЕРСКИЕ РЕШЕНИЯ</div>
                 <img
-                  src="./img/index/wwdimg3.jpg"
+                  srcset="./img/index/box3.jpg 1x, ./img/index/box3@2x.jpg 2x"
+                  src="./img/index/box3.jpg"
                   alt="графический дизайн"
                   width="370"
                 />
@@ -594,7 +598,7 @@
         <form class="join-form">
           <label for="subscribe" class="join__title"
             >ПОДПИШИТЕСЬ НА РАССЫЛКУ
-            <div class="subscribe">
+            <span class="subscribe">
               <input
                 type="email"
                 id="subscribe"
@@ -603,13 +607,12 @@
                 placeholder="E-mail"
               />
               <button type="submit" class="subscribe__button">
-                
                 Подписаться
                 <svg class="subscribe__icon" width="24" height="24">
                   <use href="img/icon.svg#icon-send"></use>
                 </svg>
               </button>
-            </div>
+            </span>
           </label>
         </form>
       </div>
@@ -678,12 +681,13 @@
                 value="agree"
               />
               <span class="icon-box">
-                <svg class="icon-box__icon" >
+                <svg class="icon-box__icon">
                   <use href="img/icon.svg#icon-check"></use>
                 </svg>
               </span>
               <span class="agree-box">
-              Соглашаюсь с рассылкой и принимаю&nbsp; <a href="" class="agree-doc">Условия договора</a>
+                Соглашаюсь с рассылкой и принимаю&nbsp;
+                <a href="" class="agree-doc">Условия договора</a>
               </span>
             </label>
           </div>
@@ -695,7 +699,8 @@
       defer
       src="https://cdnjs.cloudflare.com/ajax/libs/body-scroll-lock/3.1.5/bodyScrollLock.min.js"
       integrity="sha512-HowizSDbQl7UPEAsPnvJHlQsnBmU2YMrv7KkTBulTLEGz9chfBoWYyZJL+MUO6p/yBuuMO/8jI7O29YRZ2uBlA=="
-      crossorigin="anonymous"></script>
+      crossorigin="anonymous"
+    ></script>
     <script src="./js/mobile-menu.js"></script>
     <script src="./js/modal.js"></script>
   </body>

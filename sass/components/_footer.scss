@@ -87,6 +87,7 @@ address {
   margin-left: auto;
 }
 .subscribe {
+  display: block;
   @media screen and (min-width: $desktop) {
     display: flex;
   }
