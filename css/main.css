@@ -1661,6 +1661,9 @@ address {
 }
 
 .join-form {
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
   margin-left: auto;
 }
 
@@ -1670,17 +1673,17 @@ address {
   }
 }
 
-.subscribe {
-  display: block;
-  margin-top: 20px;
-}
-
 @media screen and (min-width: 1200px) {
-  .subscribe {
+  .join-form {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
+}
+
+.subscribe {
+  display: block;
+  margin-top: 20px;
 }
 
 .subscribe__input {
